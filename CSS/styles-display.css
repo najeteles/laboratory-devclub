@@ -1,0 +1,87 @@
+/*
+
+DISPLAY
+
+
+-BLOCK
+-INLINE
+-ONLINE-BLOCK
+
+GRID
+FLEX
+
+BLOCK
+Ve como padrao: div, section, p, h1, h2, ul, li, article
+
+Ocupa 100% da largura do elento pai
+Sempre ocupa toda sua linha
+Altura definida de acordo com o coenteúdo
+Podemos definir height e width
+Podemos definir valores de margin
+
+INLINE
+Vem como padrão: a, b, i, span
+
+Elementos em linha
+Não permite alterar height e width
+Não podemos definir valores de margin
+Ganha comportamento de uma palavra
+
+INLINE-BLOCK
+
+Elementos em linha porem com caracteristicas de display block
+Altura e largura podem ser alterados
+
+*/
+
+/* 1. Reset para o fundo não ficar branco e tirar margens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Transformamos o BODY no container do Grid */
+body {
+    background-color: #121212; /* Fundo escuro sofisticado */
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    
+    /* Altura total da tela */
+    height: 100vh;
+    padding: 20px;
+    gap: 15px;
+
+    /* DEFINIÇÃO DO LAYOUT: 2 colunas (2/1) e 2 linhas (iguais) */
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* 3. Estilo Geral para as 3 divs */
+div {
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #000;
+}
+
+/* 4. POSICIONAMENTO POR ORDEM (nth-child) */
+
+/* Primeira div (Um) - Ocupa as duas linhas da esquerda */
+div:nth-child(1) {
+    background-color: #FFFFFF; /* Branco */
+    grid-row: 1 / 3;
+}
+
+/* Segunda div (Dois) - Topo direito */
+div:nth-child(2) {
+    background-color: #F1F5F9; /* Cinza claro */
+}
+
+/* Terceira div (Três) - Base direita */
+div:nth-child(3) {
+    background-color: #E2E8F0; /* Cinza médio */
+}

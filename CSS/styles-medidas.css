@@ -1,0 +1,78 @@
+.vo{
+
+}
+
+.pai{
+    width: 1000px;
+    height: 50px;
+    background: goldenrod;
+    color: black;
+}
+
+.filho{
+    width: 1000px;
+    height: 50px;
+    background: burlywood;
+    color: black;
+}
+
+.irmao{
+    width: 1000px;
+    height: 50px;
+    background: yellowgreen;
+    color: black;
+} 
+
+.primo{
+    width: 1000px;
+    height: 50px;
+    background: rgb(138, 13, 13);
+    color: aliceblue;
+}
+
+.irma{
+    width: 1000px;
+    height: 50px;
+    background: rgb(50, 169, 205);
+    color: black;
+} 
+
+.prima{
+    width: 1000px;
+    height: 50px;
+    background: rgb(103, 13, 138);
+    color: aliceblue;
+}
+
+.mae{
+    width: 1000px;
+    height: 50px;
+    background: gray;
+    color: aliceblue;
+ }
+
+ .sobrinha{
+    width: 1000px;
+    height: 50px;
+    background: black;
+    color: aliceblue;
+ }
+
+
+/*
+Unidades de Medidas
+
+->Absolutas
+
+-> px(pixels)
+-> in(polegads)
+-> cm(centimetros)
+
+->Relativas
+
+->%(calcula o tamanho relativo ao pai)
+->vw(view width) 1vw é 1% da largura da janela do navegador
+->vh(view height) 1 vh é 1% da altura da janela do navegador
+->em - uma unidade relativa ao elemento pai
+->rem - uma unidade relativa ao elemento raiz
+*/

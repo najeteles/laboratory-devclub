@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    color: #5d5d7d;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.container-left {
+    display: inline-block;
+    width: 60%;
+    padding-left: 136px;
+    margin-top: 25%;
+
+
+}
+
+.container-rigth {
+    display: inline-block;
+    background-color: rgba(93,93,125,0.16);
+    height: 100vh;
+    width: 40%;
+    position: absolute;
+    
+
+}
+
+img {
+    position: absolute;
+    width: 650px;
+    height: auto;
+    border-radius: 30px;
+    
+    top: 50%;
+    /* O SEGREDO ESTÁ AQUI: valor negativo empurra para fora da div cinza */
+    left: -150px; 
+    
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: -15px 15px 40px rgba(0,0,0,0.4);
+}
+
+h1 {    
+    font-size: 70px;
+    line-height: 80px;
+    width: 368px;
+  
+}
+
+p {
+    font-size: 28px;
+    line-height: 48px;
+    opacity: 0.6;
+    margin: 15px 0;
+    width: 540px;
+    
+}
+
+button {
+    width: 269px;
+    height: 62px;
+    background: #9499ea;
+    box-shadow: 0px 10px 24px rgba(148,153,234,0.0979959);
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+}
+
+button:hover {
+    opacity: .8;
+
+}
+
+button:active {
+    opacity: .5;
+
+}
+
+a {
+    font-size: 38px;
+    line-height: 41px;
+    margin-right: 41px;
+    cursor: pointer;
+    
+}
+
+a:nth-child(2) {
+    opacity: .4;
+    
+}
+
+a:hover {
+    opacity: .4;
+}
+
+a:active {
+    opacity: .8;
+}
+
+header {
+    margin: 24px 0 0 57px;
+
+}
+
+@media screen and (max-width: 1376px) {
+    /* TRANSFORMA O CONTAINER EM FLEXBOX (COLUNA) */
+    .container {
+        display: flex;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        justify-content: center; /* Centraliza verticalmente na coluna */
+        align-items: center; /* Centraliza horizontalmente na coluna (O PULO DO GATO) */
+        height: auto;
+        text-align: center;
+    }
+
+    /* Ajusta a parte branca (topo agora) */
+    .container-left {
+        width: 100%;
+        height: auto;
+        padding: 40px 20px;
+        order: 1; /* Faz o texto vir primeiro */
+    }
+
+    /* Ajusta a parte cinza (baixo agora) */
+    .container-rigth { /* Mantendo seu erro de escrita 'rigth' para funcionar */
+        display: block;
+        position: static; /* Remove o absolute do desktop */
+        width: 100%;
+        height: auto;
+        padding: 50px 0;
+        order: 2; /* Faz a imagem vir depois do texto */
+    }
+
+    /* AJUSTE E CENTRALIZAÇÃO DA IMAGEM */
+    img {
+    display: block;       /* Transforma a imagem em bloco para aceitar margem auto */
+    margin-left: auto;    /* Empurra da esquerda para o centro */
+    margin-right: auto;   /* Empurra da direita para o centro */
+    
+    position: static;     /* Mantém ela no fluxo normal */
+    width: 80%;           /* O tamanho que você já tinha definido */
+    max-width: 450px;     /* Limite para não estourar em tablets */
+    
+    /* LIMPEZA TOTAL (Importante para não sobrar lixo do desktop) */
+    left: 0;              
+    transform: none;      
+}
+
+    /* CENTRALIZAÇÃO DO BOTÃO (Mantendo o que funcionou) */
+    .link-buttom {
+        display: inline-block;
+        margin: 20px auto;
+        text-align: center;
+        width: auto;
+        padding: 10px 30px;
+    }
+
+    /* Esconde o Header (conforme você tentou fazer) */
+    header {
+        display: none;
+    }
+
+    /* Ajusta o Título para telas menores e centraliza */
+    h1 {
+        font-size: 46px;
+        line-height: 44px;
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    /* Ajusta o Texto descritivo e centraliza */
+    p {
+        font-size: 26px;
+        line-height: 24px;
+        width: 100%;
+        text-align: center;
+        margin: 15px 0;
+    }
+}

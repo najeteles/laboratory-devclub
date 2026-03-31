@@ -1,0 +1,103 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o menu horizontalmente */
+    align-items: center;
+    padding: 30px 0;         /* Espaçamento superior e inferior */
+    margin: 0;               /* Remova aquele margin fixo que estava na screenshot anterior */
+}
+
+.link-header {
+    font-weight: 600;
+    font-size: 44px;
+    line-break: 29px;
+    color: #989d9c;
+    cursor: pointer;
+    margin-right: 23px;
+}
+
+.button-header {
+    background: #665ae1;
+    border-radius: 20.5px;
+    width: 130px;
+    height: 41px;
+    border: none;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+.logo-image {
+    width: 1000px;             /* Ajuste o tamanho conforme sua necessidade */
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(5,0,5,2.25));
+    /* Remova margin-left e display: inline-block daqui */
+}
+
+.button-main {
+    background: #adff00;
+    border-radius: 30px;
+    width: 239px;
+    height: 64px;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 34px;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,2.25));
+    color: #000200;
+
+
+    
+}
+
+/* Substitua o seletor 'main' pelo container que abraça a imagem e o texto */
+main {
+    display: flex;
+    align-items: center;      /* Centraliza o texto verticalmente em relação à imagem */
+    justify-content: center;   /* Centraliza o conjunto todo na tela */
+    min-height: 100vh;        /* Faz o conteúdo ocupar a altura total da tela */
+    gap: 60px;                /* Espaço fixo entre a imagem e o texto */
+    padding: 20px;
+}
+
+section {
+    max-width: 600px; 
+    margin-left: 86px;        /* Limita a largura do texto para não esticar demais */
+    /* Remova display: inline-block daqui */
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 80px;          /* Ajustado para caber melhor lado a lado */
+    line-height: 1.1;
+    color: #515151;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 60px;
+    color: #515151;
+}
+
+p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #515151;
+    width: 515px;
+    margin-top: 32px;
+    margin-bottom: 65px;
+}

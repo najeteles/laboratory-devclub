@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000; /* Fundo preto absoluto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.universo {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    perspective: 1000px; /* Cria o ambiente 3D */
+}
+
+.tunel-infinito {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.camada {
+    width: 100vmin; /* Quadrado baseado no tamanho da tela */
+    height: 100vmin;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Começa no centro */
+    opacity: 0;
+    border: 20px solid; /* A espessura da "parede" do túnel */
+    
+    /* A mágica: animação contínua */
+    animation: moverTunel 10s linear infinite;
+}
+
+/* Cores Vivas e Alternadas (Padrão Neon) */
+.c1, .c5, .c9 { border-color: #0ff; box-shadow: 0 0 20px #0ff; } /* Ciano */
+.c2, .c6, .c10 { border-color: #f0f; box-shadow: 0 0 20px #f0f; } /* Magenta */
+.c3, .c7 { border-color: #ff0; box-shadow: 0 0 20px #ff0; } /* Amarelo */
+.c4, .c8 { border-color: #0f0; box-shadow: 0 0 20px #0f0; } /* Verde */
+
+/* Delays para criar o fluxo contínuo */
+.c1 { animation-delay: 0s; }
+.c2 { animation-delay: 1s; }
+.c3 { animation-delay: 2s; }
+.c4 { animation-delay: 3s; }
+.c5 { animation-delay: 4s; }
+.c6 { animation-delay: 5s; }
+.c7 { animation-delay: 6s; }
+.c8 { animation-delay: 7s; }
+.c9 { animation-delay: 8s; }
+.c10 { animation-delay: 9s; }
+
+/* A Animação que cria a profundidade infinita */
+@keyframes moverTunel {
+    0% {
+        transform: translate(-50%, -50%) scale(0); /* Nasce no centro */
+        opacity: 0;
+    }
+    5% {
+        opacity: 1; /* Aparece rapidamente */
+    }
+    80% {
+        opacity: 1; /* Mantém visível durante o crescimento */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2); /* Cresce além da tela */
+        opacity: 0; /* Desaparece na borda */
+    }
+}

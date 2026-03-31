@@ -1,0 +1,87 @@
+/* RESET E DECLARAÇÃO DE VARIÁVEIS (O CORAÇÃO DO CÓDIGO) */
+:root {
+    --tempo-ciclo: 24s;
+    --cor-borda: rgba(255, 255, 255, 0.65);
+    --fonte-titulo: 'Bebas Neue', sans-serif;
+    --fonte-corpo: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body, html {
+    width: 100%; height: 100%;
+    background: #000 !important;
+    overflow: hidden;
+}
+
+.universo {
+    width: 100vw; height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    perspective: 1200px;
+}
+
+/* --- TÚNEL --- */
+.tunel-wrapper {
+    position: absolute; width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    z-index: 1;
+    animation: cicloCurva var(--tempo-ciclo) ease-in-out infinite;
+}
+
+.c {
+    position: absolute; top: 50%; left: 50%;
+    width: 110vmin; height: 110vmin;
+    border: 2px solid var(--cor-borda);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) translateZ(-1500px);
+    animation: profundidade 4s linear infinite;
+}
+
+/* Delays das camadas */
+.c1{animation-delay:0s}.c2{animation-delay:0.4s}.c3{animation-delay:0.8s}.c4{animation-delay:1.2s}.c5{animation-delay:1.6s}
+.c6{animation-delay:2s}.c7{animation-delay:2.4s}.c8{animation-delay:2.8s}.c9{animation-delay:3.2s}.c10{animation-delay:3.6s}
+
+/* --- TEXTOS (BRANCO PURO) --- */
+.overlay-textos {
+    position: absolute; z-index: 10;
+    width: 100%; height: 100%;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.frase {
+    position: absolute; text-align: center; opacity: 0; color: #FFF;
+    font-family: var(--fonte-corpo); letter-spacing: 12px;
+    text-shadow: 0 0 40px rgba(0,0,0,1);
+    font-weight: 200;
+}
+
+.f1 { font-size: 1.8rem; animation: surgirNoCentro var(--tempo-ciclo) linear infinite 0s; }
+.f2 { font-size: 9rem; font-family: var(--fonte-titulo); letter-spacing: 35px; animation: surgirNoCentro var(--tempo-ciclo) linear infinite 6s; }
+.f3 { font-size: 1.8rem; animation: surgirNoCentro var(--tempo-ciclo) linear infinite 12s; }
+.f4 { font-size: 2.5rem; font-style: italic; animation: surgirNoCentro var(--tempo-ciclo) linear infinite 18s; }
+
+/* --- ANIMAÇÕES --- */
+@keyframes profundidade {
+    0% { transform: translate(-50%, -50%) translateZ(-1500px); opacity: 0; }
+    15% { opacity: 1; }
+    100% { transform: translate(-50%, -50%) translateZ(800px); opacity: 0; }
+}
+
+@keyframes surgirNoCentro {
+    0% { opacity: 0; transform: scale(0.1) translateZ(-600px); filter: blur(15px); }
+    4% { opacity: 1; filter: blur(0); }
+    18% { opacity: 1; transform: scale(1.1) translateZ(50px); }
+    23%, 100% { opacity: 0; transform: scale(2.5) translateZ(600px); }
+}
+
+@keyframes cicloCurva {
+    /* Túnel reto durante os textos (0-20%, 25-45%, 50-70%, 75-95%) */
+    0%, 20% { transform: rotateY(0deg); }
+    23% { transform: rotateY(25deg); } /* Curva rápida após frase 1 */
+    25%, 45% { transform: rotateY(0deg); }
+    48% { transform: rotateY(-25deg); } /* Curva rápida após frase 2 */
+    50%, 70% { transform: rotateY(0deg); }
+    73% { transform: rotateY(20deg); } /* Curva rápida após frase 3 */
+    75%, 95% { transform: rotateY(0deg); }
+    98% { transform: rotateY(-20deg); }
+}
