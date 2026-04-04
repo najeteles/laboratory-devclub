@@ -1,0 +1,87 @@
+:root {
+    --preto: #000000;
+    --neon: #00ffff;
+    --tempo-viagem: 2.5s;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--preto);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+    perspective: 1500px;
+}
+
+#canvasWormhole { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+
+.overlay-narrativa {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+/* 🧱 Lógica de Reset de Profundidade */
+.cena {
+    position: absolute;
+    width: 90%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    /* Ponto de partida: Fundo absoluto */
+    transform: translateZ(-2500px) scale(0.01);
+    pointer-events: none;
+}
+
+/* Transição suave APENAS quando for para o estado ATIVA ou SAINDO */
+.cena.ativa, .cena.saindo {
+    transition: opacity 1s ease, transform var(--tempo-viagem) cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cena.ativa {
+    opacity: 1;
+    transform: translateZ(0px) scale(1);
+    z-index: 50;
+}
+
+.cena.saindo {
+    opacity: 0;
+    transform: translateZ(1000px) scale(3); /* Passa pela câmera */
+    z-index: 1;
+}
+
+/* Estilo Imagens e Logo */
+.cena img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px var(--neon);
+    margin-bottom: 25px;
+}
+
+.logo { max-width: 500px !important; }
+
+.frase {
+    font-weight: 900;
+    font-size: clamp(1.8rem, 6vw, 3.8rem);
+    text-transform: uppercase;
+    text-shadow: 0 0 30px black;
+}
+
+/* Destaque para o BE FREE */
+.destaque-final {
+    font-size: clamp(4rem, 15vw, 10rem);
+    color: var(--neon);
+    letter-spacing: 10px;
+    text-shadow: 0 0 50px var(--neon);
+}
