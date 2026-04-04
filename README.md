@@ -19,7 +19,7 @@ Foco total em adaptação fluida, garantindo que a interface entregue a melhor e
 <br><br>
 
 ### 🌀 2. Efeito Imersivo (`index-tunel.html`)
-Desenvolvimento de animações avançadas em CSS puro. O "Túnel Highlander" demonstra o controle de profundidade e keyframes para reter a atenção do usuário.
+Desenvolvimento de animações avançadas em CSS puro. O "Túnel MyServ" demonstra o controle de profundidade e keyframes para reter a atenção do usuário.
 <br>
 <img src="tunel-myserv.gif" width="600px" alt="Demonstração Túnel MyServ Company" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
 <br><br>
