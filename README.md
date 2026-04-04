@@ -1,6 +1,6 @@
 # 🧪 Laboratório Frontend - My Serv Company
 
-Repositório dedicado ao desenvolvimento de interfaces modernas, estudos aprofundados de CSS/HTML e construção de Landing Pages de alta conversão. Todo o código aqui serve como base para os portais e vitrines dos clientes da agência.
+Repositório dedicado ao desenvolvimento de interfaces modernas, estudos aprofundados de CSS/HTML/JS e construção de Landing Pages de alta conversão. Todo o código aqui serve como base para os portais e vitrines dos clientes da agência.
 
 ## 🚀 Tecnologias Aplicadas
 
