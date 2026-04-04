@@ -27,7 +27,7 @@ Desenvolvimento de animações avançadas em CSS puro. O "Túnel Highlander" dem
 ### 🚧 3. Dinamismo Visual (`index-velocidade-da-luz.html`) - *[WIP]*
 *[Em Desenvolvimento]* - Arquivo base preparado para implementação de efeitos de aceleração (Velocidade da Luz) e validação de esteira de integração contínua (CI/CD) via Git.
 <br>
-<img src="Velocidade-da-luz.gif" width="600px" alt="Demonstração Velocidade da Luz" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+<img src="MyServ-na-velocidade-da-luz.gif" width="600px" alt="Demonstração Velocidade da Luz" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
 <br>
 
 ---
