@@ -64,6 +64,8 @@ body {
 .cena img {
     width: 100%;
     max-width: 600px;
+    max-height: 45vh; /* Trava a altura em no máximo 45% do tamanho da tela */
+    object-fit: contain; /* Se a tela for muito baixa, reduz a imagem sem distorcer ou cortar */
     border-radius: 20px;
     box-shadow: 0 0 50px var(--neon);
     margin-bottom: 25px;
