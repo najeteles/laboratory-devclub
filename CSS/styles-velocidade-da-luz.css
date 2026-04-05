@@ -62,7 +62,7 @@ body {
 
 /* Estilo Imagens e Logo */
 .cena img {
-    width: 100%;
+    width: auto;
     max-width: 600px;
     max-height: 45vh; /* Trava a altura em no máximo 45% do tamanho da tela */
     object-fit: contain; /* Se a tela for muito baixa, reduz a imagem sem distorcer ou cortar */
