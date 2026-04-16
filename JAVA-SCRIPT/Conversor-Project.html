@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Money - My Serv Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Conversor-Project.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <img src="../CSS/img/logo.png" alt="Logo" class="logo">
+        </header>
+
+        <main>
+            <section class="section-input">
+                <label>Converter de:</label>
+                <div class="currency-select-box">
+                    <img src="../CSS/img/brasil.png" alt="Bandeira Brasil">
+                    <span>R$ Real brasileiro</span>
+                </div>
+
+                <label>Valor a converter:</label>
+                <input type="number" id="valor-input" placeholder="R$ 10.000,00" class="input-money">
+            </section>
+
+            <section class="section-selection">
+                <img src="../CSS/img/seta.png" alt="Seta" class="arrow-down">
+                
+                <label>Converter para:</label>
+                <select id="moeda-select">
+                    <option value="USD">🇺🇸 Dólar americano</option>
+                    <option value="EUR">🇪🇺 Euro</option>
+                    <option value="BTC">₿ Bitcoin</option>
+                </select>
+
+                <button type="button" id="converter-button">Converter</button>
+            </section>
+
+            <section class="section-result">
+                <div class="currency-box">
+                    <img src="../CSS/img/brasil.png" alt="Brasil">
+                    <p class="currency-name">Real</p>
+                    <p class="currency-value" id="valor-real-display">R$ 0,00</p>
+                </div>
+
+                <img src="../CSS/img/seta.png" alt="Seta" class="arrow-right" style="transform: rotate(-90deg); width: 20px;">
+
+                <div class="currency-box">
+                    <img src="../CSS/img/usa.png" alt="Dólar" id="bandeira-destino">
+                    <p class="currency-name" id="nome-moeda-destino">Dólar americano</p>
+                    <p class="currency-value" id="valor-moeda-display">US$ 0,00</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./Conversor-Project.js"></script>
+</body>
+</html>
