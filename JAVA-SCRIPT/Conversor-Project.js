@@ -16,9 +16,9 @@ function converterMoedas() {
     }
 
     // Taxas fixas (Segurança de Produção)
-    const taxaDolar = 5.20
-    const taxaEuro = 5.60
-    const taxaBTC = 350000.00
+    const taxaDolar = 4.99
+    const taxaEuro = 5.88
+    const taxaBTC = 372346.05
 
     let valorConvertido = 0
 
