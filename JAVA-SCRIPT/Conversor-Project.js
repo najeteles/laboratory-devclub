@@ -1,80 +1,100 @@
 const converterButton = document.querySelector("#converter-button")
-const moedaSelect = document.querySelector("#moeda-select")
+const moedaSelectDe = document.querySelector("#moeda-select-de") // Select de origem
+const moedaSelectPara = document.querySelector("#moeda-select-para") // Select de destino
 const valorInput = document.querySelector("#valor-input")
 
-const valorRealDisplay = document.querySelector("#valor-real-display")
-const valorMoedaDisplay = document.querySelector("#valor-moeda-display")
-const nomeMoedaDestino = document.querySelector("#nome-moeda-destino")
-const bandeiraDestino = document.querySelector("#bandeira-destino")
+// Elementos do display de Origem
+const valorDeDisplay = document.querySelector("#valor-de-display")
+const nomeMoedaDe = document.querySelector("#nome-moeda-de")
+const bandeiraDe = document.querySelector("#bandeira-de")
+
+// Elementos do display de Destino
+const valorParaDisplay = document.querySelector("#valor-para-display")
+const nomeMoedaPara = document.querySelector("#nome-moeda-para")
+const bandeiraPara = document.querySelector("#bandeira-para")
 
 function converterMoedas() {
-    const valorAConverter = valorInput.value
+    const valorAConverter = parseFloat(valorInput.value)
 
-    if (valorAConverter === "" || valorAConverter <= 0) {
-        alert("Insira um valor para converter.")
+    if (isNaN(valorAConverter) || valorAConverter <= 0) {
+        alert("Insira um valor válido para converter.")
         return
     }
 
-    // Taxas fixas (Segurança de Produção)
-    const taxaDolar = 4.99
-    const taxaEuro = 5.88
-    const taxaBTC = 372346.05
-
-    let valorConvertido = 0
-
-    if (moedaSelect.value === "USD") valorConvertido = valorAConverter / taxaDolar
-    if (moedaSelect.value === "EUR") valorConvertido = valorAConverter / taxaEuro
-    if (moedaSelect.value === "BTC") valorConvertido = valorAConverter / taxaBTC
-
-    // Formatação Real
-    valorRealDisplay.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(valorAConverter)
-
-    // Formatação Destino
-    if (moedaSelect.value === "USD") {
-        valorMoedaDisplay.innerHTML = new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD"
-        }).format(valorConvertido)
+    // TAXAS ATUALIZADAS (Referência: 1 de cada moeda vale quantos Reais?)
+    const taxas = {
+        BRL: 1.0,
+        USD: 4.99,
+        EUR: 5.88,
+        BTC: 372346.05
     }
 
-    if (moedaSelect.value === "EUR") {
-        valorMoedaDisplay.innerHTML = new Intl.NumberFormat("de-DE", {
+    // LÓGICA UNIVERSAL:
+    // 1. Convertemos o valor de origem para REAIS
+    const valorEmReal = valorAConverter * taxas[moedaSelectDe.value]
+    
+    // 2. Convertemos de REAIS para a moeda de destino
+    const valorConvertido = valorEmReal / taxas[moedaSelectPara.value]
+
+    // FORMATAÇÃO DO VALOR DE ORIGEM (Lado Esquerdo)
+    if (moedaSelectDe.value === "BTC") {
+        valorDeDisplay.innerHTML = `₿ ${valorAConverter}`
+    } else {
+        valorDeDisplay.innerHTML = new Intl.NumberFormat(getLocale(moedaSelectDe.value), {
             style: "currency",
-            currency: "EUR"
-        }).format(valorConvertido)
+            currency: moedaSelectDe.value
+        }).format(valorAConverter)
     }
 
-    if (moedaSelect.value === "BTC") {
-        valorMoedaDisplay.innerHTML = `₿ ${valorConvertido.toFixed(7)}`
+    // FORMATAÇÃO DO VALOR DE DESTINO (Lado Direito)
+    if (moedaSelectPara.value === "BTC") {
+        valorParaDisplay.innerHTML = `₿ ${valorConvertido.toFixed(7)}`
+    } else {
+        valorParaDisplay.innerHTML = new Intl.NumberFormat(getLocale(moedaSelectPara.value), {
+            style: "currency",
+            currency: moedaSelectPara.value
+        }).format(valorConvertido)
     }
 }
 
-function mudarMoedaDestino() {
-    // CAMINHOS ATUALIZADOS: pasta img dentro da pasta css
-    const imgDolar = "./img/usa.png"
-    const imgEuro = "./img/euro.png"
-    const imgBitcoin = "./img/bitcoin.png"
-
-    if (moedaSelect.value === "USD") {
-        nomeMoedaDestino.innerHTML = "Dólar americano"
-        bandeiraDestino.src = imgDolar
+// Função auxiliar para pegar o local de formatação
+function getLocale(moeda) {
+    const locales = {
+        BRL: "pt-BR",
+        USD: "en-US",
+        EUR: "pt-BR",
+        BTC: "en-US"
     }
-
-    if (moedaSelect.value === "EUR") {
-        nomeMoedaDestino.innerHTML = "Euro"
-        bandeiraDestino.src = imgEuro
-    }
-
-    if (moedaSelect.value === "BTC") {
-        nomeMoedaDestino.innerHTML = "Bitcoin"
-        bandeiraDestino.src = imgBitcoin
-    }
-
-    converterMoedas() 
+    return locales[moeda]
 }
 
+function atualizarInterface() {
+    const imagens = {
+        BRL: "./img/brasil.png",
+        USD: "./img/usa.png",
+        EUR: "./img/euro.png",
+        BTC: "./img/bitcoin.png"
+    }
+
+    const nomes = {
+        BRL: "Real brasileiro",
+        USD: "Dólar americano",
+        EUR: "Euro",
+        BTC: "Bitcoin"
+    }
+
+    // Atualiza o lado de ORIGEM
+    bandeiraDe.src = imagens[moedaSelectDe.value]
+    nomeMoedaDe.innerHTML = nomes[moedaSelectDe.value]
+
+    // Atualiza o lado de DESTINO
+    bandeiraPara.src = imagens[moedaSelectPara.value]
+    nomeMoedaPara.innerHTML = nomes[moedaSelectPara.value]
+
+    converterMoedas()
+}
+
+// Ouvintes de Eventos
 converterButton.addEventListener("click", converterMoedas)
-moedaSelect.addEventListener("change", mudarMoedaDestino)
+moedaSelectDe.addEventListener("change", atualizarInterface)
+moedaSelectPara.addEventListener("change", atualizarInterface)

@@ -4,10 +4,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    outline: none; /* Remove bordas de foco padrão */
+    outline: none;
 }
 
-/* Proteção contra imagens gigantes vinda do HTML */
 img {
     max-width: 100%;
     display: block;
@@ -22,28 +21,25 @@ body {
     padding: 20px;
 }
 
-/* --- CONTEINER PRINCIPAL --- */
 .container {
     background-color: #ffffff;
     width: 100%;
-    max-width: 375px; /* Mantém o estilo Mobile do projeto */
+    max-width: 375px;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* --- HEADER E LOGO --- */
 header {
     text-align: center;
     margin-bottom: 30px;
 }
 
 .logo {
-    width: 180px; /* Ajuste para a sua logo não sumir nem explodir */
+    width: 180px;
     margin: 0 auto;
 }
 
-/* --- SEÇÕES DO FORMULÁRIO --- */
 main section {
     display: flex;
     flex-direction: column;
@@ -57,22 +53,6 @@ label {
     font-weight: 400;
 }
 
-/* Caixa cinza do "Real Brasileiro" */
-.currency-select-box {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #777777;
-    border-radius: 4px;
-    padding: 12px;
-    background-color: #f9f9f9;
-}
-
-.currency-select-box img {
-    width: 24px; /* Bandeira menor dentro do campo de seleção */
-}
-
-/* Inputs e Selects */
 .input-money, 
 select {
     padding: 14px;
@@ -83,27 +63,25 @@ select {
     background-color: #ffffff;
     cursor: pointer;
     transition: border-color 0.3s;
+    margin-bottom: 10px;
 }
 
 .input-money:focus, 
 select:focus {
-    border-color: #772FC3; /* Destaque roxo ao clicar */
+    border-color: #772FC3;
 }
 
-/* Seção do Meio (Seta e Select) */
 .section-selection {
     align-items: center;
 }
 
-/* 1. A Seta que fica entre os inputs (Vertical) */
 .arrow-down {
-    width: 65px !important;     /* Aumentamos de 25px para 45px */
+    width: 65px !important;
     height: auto;
-    margin: 15px auto !important;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1)); /* Dá um leve destaque */
+    margin: 5px auto !important;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
 }
 
-/* --- BOTÃO --- */
 button {
     background-color: #772FC3;
     color: #ffffff;
@@ -118,15 +96,9 @@ button {
     transition: opacity 0.2s, transform 0.1s;
 }
 
-button:hover {
-    opacity: 0.9;
-}
+button:hover { opacity: 0.9; }
+button:active { transform: scale(0.98); }
 
-button:active {
-    transform: scale(0.98); /* Feedback de clique */
-}
-
-/* --- SEÇÃO DE RESULTADOS (O QUADRO ROXO) --- */
 .section-result {
     display: flex;
     justify-content: space-between;
@@ -142,34 +114,29 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1; /* Garante que os dois lados tenham o mesmo espaço */
+    flex: 1;
 }
 
-/* Controle rígido das bandeiras de resultado */
 .currency-box img {
     width: 50px; 
     height: 50px;
-    object-fit: contain; /* Não deixa a imagem achatar */
+    object-fit: contain;
     margin-bottom: 8px;
 }
 
-.currency-name {
-    font-size: 14px;
-    color: #777777;
-}
+.currency-name { font-size: 14px; color: #777777; }
 
 .currency-value {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: #555555;
     margin-top: 4px;
     text-align: center;
 }
 
-/* 2. A Seta que fica no quadro de resultado (Horizontal) */
 .arrow-right {
-    width: 55px !important;     /* Aumentamos de 20px para 35px */
+    width: 35px !important;
     height: auto;
-    opacity: 0.9;               /* Deixamos ela mais visível */
-    transform: rotate(-90deg);  /* Se a sua imagem for vertical, isso a deita */
+    opacity: 0.9;
+    transform: rotate(-90deg);
 }
