@@ -11,7 +11,7 @@ function converterMoedas() {
     const valorAConverter = valorInput.value
 
     if (valorAConverter === "" || valorAConverter <= 0) {
-        alert("Jean, insira um valor para converter.")
+        alert("Insira um valor para converter.")
         return
     }
 
