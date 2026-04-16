@@ -54,9 +54,9 @@ function converterMoedas() {
 
 function mudarMoedaDestino() {
     // CAMINHOS ATUALIZADOS: pasta img dentro da pasta css
-    const imgDolar = "../CSS/img/usa.png"
-    const imgEuro = "../CSS/img/euro.png"
-    const imgBitcoin = "../CSS/img/bitcoin.png"
+    const imgDolar = "./img/usa.png"
+    const imgEuro = "./img/euro.png"
+    const imgBitcoin = "./img/bitcoin.png"
 
     if (moedaSelect.value === "USD") {
         nomeMoedaDestino.innerHTML = "Dólar americano"
