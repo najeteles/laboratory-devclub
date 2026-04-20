@@ -1,7 +1,7 @@
 /*
 variáveis
 
--leet - PODE ALTERAR O VALOR QUANDO QUISER
+-let - PODE ALTERAR O VALOR QUANDO QUISER
 -const - VALOR NÃO PODE SER DECLARADO NOVAMENTE
 -var  - descontinuado
 

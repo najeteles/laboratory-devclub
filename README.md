@@ -30,5 +30,11 @@ Desenvolvimento de animações avançadas em CSS puro. O "Túnel MyServ" demonst
 <img src="MyServ-na-velocidade-da-luz.gif" width="600px" alt="Demonstração Velocidade da Luz" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
 <br>
 
+### 💰 4. Engenharia de Câmbio
+Lógica de conversão "Universal" (Any-to-Any) com normalização de dados e interface reativa para múltiplos ativos financeiros.
+<br>
+<img src="./Conversordemoedas.gif" width="300px" alt="Demonstração Conversor de Moedas My Serv" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
+<br>
+
 ---
 *Mantido e versionado diretamente do nó local (HP ProLiant ML30 Gen9) por Jean Teles.*

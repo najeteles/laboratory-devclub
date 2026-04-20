@@ -1,0 +1,142 @@
+/* --- RESET E CONFIGURAÇÕES GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 375px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 180px;
+    margin: 0 auto;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+label {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.input-money, 
+select {
+    padding: 14px;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #555555;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.input-money:focus, 
+select:focus {
+    border-color: #772FC3;
+}
+
+.section-selection {
+    align-items: center;
+}
+
+.arrow-down {
+    width: 65px !important;
+    height: auto;
+    margin: 5px auto !important;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+}
+
+button {
+    background-color: #772FC3;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 16px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+button:hover { opacity: 0.9; }
+button:active { transform: scale(0.98); }
+
+.section-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #772FC3;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.currency-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.currency-box img {
+    width: 50px; 
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.currency-name { font-size: 14px; color: #777777; }
+
+.currency-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #555555;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.arrow-right {
+    width: 35px !important;
+    height: auto;
+    opacity: 0.9;
+    transform: rotate(-90deg);
+}
