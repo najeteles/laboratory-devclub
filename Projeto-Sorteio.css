@@ -3,12 +3,10 @@ html, body {
     padding: 0;
     width: 100%;
     min-height: 100vh;
-    background-color: #0d0d0d; /* Fundo de segurança caso a imagem falhe */
-}
-
-body {
-    background: url('./img/background-pattern.png') no-repeat center center fixed;
-    background-size: cover; /* ISSO faz a imagem esticar para a tela toda */
+    background-color: #0d0d0d;
+    /* Gradiente radial que dá profundidade, sem precisar de arquivo de imagem */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #080808 100%);
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background: rgba(0, 0, 0, 0.6); /* Camada escura para o fundo não brigar com o card */
+    background: transparent; /* Deixa o fundo do wrapper transparente para mostrar o gradiente do body */
 }
 
 .card {
@@ -67,7 +65,7 @@ p {
 
 label {
     color: #772FC3;
-    font-size: 11px;
+    font-size: 18px;
     font-weight: 800;
     margin-bottom: 8px;
 }
@@ -80,7 +78,7 @@ input {
     border-radius: 10px;
     color: #fff;
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 input:focus {
@@ -97,7 +95,7 @@ button {
     border: none;
     border-radius: 15px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     cursor: pointer;
     transition: all 0.2s;
     text-transform: uppercase;

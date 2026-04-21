@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+</body>
+<h1>0</h1>
+<button onclick="stopCron()">Parar Cronômetro</button>
+<button onclick="startCron()">Iniciar Cronômetro</button>
+</body>
+    
+
+    <script>
+        let count = 0;
+        let intervalId;
+
+        function startCron() {
+            intervalId = setInterval(() => {
+                count++;
+                document.querySelector("h1").textContent = count;
+            }, 1000);
+        }
+
+        function stopCron() {
+            clearInterval(intervalId);
+        }
+    </script>   
+
+</html>
