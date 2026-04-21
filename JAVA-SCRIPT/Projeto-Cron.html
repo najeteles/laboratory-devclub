@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyServ - Cronômetro Pro</title>
+    
+    <link rel="stylesheet" href="Projeto-Cron.css">
+</head>
+<body>
+    
+    <main class="main-wrapper">
+        <div class="card timer-card">
+            <header>
+                <img src="/Ampulheta-transparente.png" alt="Ampulheta" class="header-logo">
+                <p>Cronômetro de Alta Precisão</p>
+            </header>
+
+            <div id="display" class="timer-display">
+                00:00:00<span class="ms">.00</span>
+            </div>
+
+            <div class="controls-grid">
+                <button id="startBtn" onclick="startTimer()" class="btn-start">START</button>
+                <button id="pauseBtn" onclick="pauseTimer()" class="btn-pause" disabled>PAUSE</button>
+                <button id="lapBtn" onclick="recordLap()" class="btn-lap" disabled>LAP</button>
+                <button id="resetBtn" onclick="resetTimer()" class="btn-reset">RESET</button>
+            </div>
+
+            <ul id="lapsList" class="laps-container">
+                </ul>
+        </div>
+    </main>
+
+    <script src="Projeto-Cron.js"></script>
+</body>
+</html>
