@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador - My Serv Company</title>
+    <link rel="stylesheet" href="Projeto-Sorteio.css">
+</head>
+<body>
+    
+    <div class="main-wrapper">
+        <div class="card">
+            <header>
+                <img src="/myserv-sorteio-transparente.png" alt="MyServ Sorteio" class="header-logo">
+                <p>Escolha o intervalo entre números:</p>
+            </header>
+
+            <div class="input-row">
+                <div class="input-box">
+                    <label>MÍNIMO</label>
+                    <input type="number" id="min-val" value="1">
+                </div>
+                <div class="input-box">
+                    <label>MÁXIMO</label>
+                    <input type="number" id="max-val" value="100">
+                </div>
+            </div>
+
+            <button onclick="gerarSorteio()">EXECUTAR SORTEIO</button>
+
+            <div id="display-resultado" class="result-display">--</div>
+        </div>
+
+        <footer class="branding-footer">
+            <img src="/logo-myserv-transparente.png" alt="MyServ Logo">
+        </footer>
+    </div>
+
+    <script src="Projeto-Sorteio.js"></script>
+</body>
+</html>
