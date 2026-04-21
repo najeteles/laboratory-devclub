@@ -36,5 +36,10 @@ Lógica de conversão "Universal" (Any-to-Any) com normalização de dados e int
 <img src="./Conversordemoedas.gif" width="300px" alt="Demonstração Conversor de Moedas My Serv" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
 
+### 🎲 5. Sorteio de Comando
+Lógica de geração aleatória com parametrização de intervalo dinâmico (Mínimo/Máximo) e interface imersiva.
+<br>
+<img src="./Sorteio.gif" width="300px" alt="Demonstração Sorteador MyServ" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
+<br>
 ---
 *Mantido e versionado diretamente do nó local (HP ProLiant ML30 Gen9) por Jean Teles.*
