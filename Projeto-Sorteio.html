@@ -8,38 +8,34 @@
 </head>
 <body>
     
-    <div class="main-wrapper">
+    <main class="main-wrapper">
         <header class="branding-top">
             <img src="logo-myserv-transparente.png" alt="MyServ Logo">
         </header>
 
-        <div class="card">
+        <section class="card">
             <header class="card-header">
-            <header>
-                <img src="myserv-sorteio-transparente.png" alt="MyServ Sorteio" class="header-logo">
+                <img src="myserv-sorteio-transparente.png" alt="Ícone Sorteio" class="header-logo">
                 <p>Escolha o intervalo entre números:</p>
             </header>
 
             <div class="input-row">
                 <div class="input-box">
-                    <label>MÍNIMO</label>
+                    <label for="min-val">MÍNIMO</label>
                     <input type="number" id="min-val" value="1">
                 </div>
                 <div class="input-box">
-                    <label>MÁXIMO</label>
+                    <label for="max-val">MÁXIMO</label>
                     <input type="number" id="max-val" value="100">
                 </div>
             </div>
 
-            <button onclick="gerarSorteio()">EXECUTAR SORTEIO</button>
+            <button onclick="gerarSorteio()">Executar Sorteio</button>
 
             <div id="display-resultado" class="result-display">--</div>
-        </div>
+        </section>
 
-        <footer class="branding-footer">
-            <img src="logo-myserv-transparente.png" alt="MyServ Logo">
-        </footer>
-    </div>
+        </main>
 
     <script src="Projeto-Sorteio.js"></script>
 </body>
