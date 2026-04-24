@@ -41,5 +41,11 @@ Lógica de geração aleatória com parametrização de intervalo dinâmico (Mí
 <br>
 <img src="./Sorteio.gif" width="300px" alt="Demonstração Sorteador MyServ" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+
+### ⏱️ 6. Motor de Cronometragem (Cronômetro)
+Lógica de controle de estado assíncrono (Start/Pause/Reset) utilizando processamento de intervalos em tempo real e renderização dinâmica de interface.
+<br>
+<img src="./Cronometro.gif" width="300px" alt="Demonstração do Cronômetro" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
+<br>
 ---
 *Mantido e versionado diretamente do nó local (HP ProLiant ML30 Gen9) por Jean Teles.*
