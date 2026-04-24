@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpô Casino - MyServ</title>
+    <link rel="stylesheet" href="Projeto-Jokempo.css">
+</head>
+<body>
+
+    <main class="casino-room">
+        <section class="slot-machine">
+            <header class="machine-header">
+                <h1>JOKENPÔ</h1>
+            </header>
+
+            <div class="screen-area">
+                <div class="displays-container">
+                    <div class="circle-display">
+                        <span class="label">VOCÊ</span>
+                        <div class="emoji-slot" id="display-player">❓</div>
+                    </div>
+
+                    <div class="circle-display">
+                        <span class="label">ALEXA</span>
+                        <div class="emoji-slot" id="display-alexa">❓</div>
+                    </div>
+                </div>
+
+                <div class="waiting-zone">
+                    <span class="wait-label">AGUARDANDO</span>
+                    <div class="wait-circle" id="waiting-display">...</div>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <div class="score-board">VOCÊ: <span id="score-player">0</span></div>
+                <div class="status-bar" id="status-text">FAÇA SUA APOSTA!</div>
+                <div class="score-board">ALEXA: <span id="score-alexa">0</span></div>
+            </div>
+
+            <div class="control-deck">
+                <button class="action-btn" onclick="playGame('rock')">✊</button>
+                <button class="action-btn" onclick="playGame('paper')">✋</button>
+                <button class="action-btn" onclick="playGame('scissors')">✌️</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="Projeto-Jokempo.js"></script>
+</body>
+</html>

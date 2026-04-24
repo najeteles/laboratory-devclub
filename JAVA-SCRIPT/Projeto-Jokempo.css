@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Fundo escuro de cassino usando imagem realista */
+    background: url('https://images.unsplash.com/photo-1596838132731-dd964551319a?auto=format&fit=crop&q=80&w=1920') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casino-room {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* O Chassi da Máquina */
+.slot-machine {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    border: 4px solid #4a4e69;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    box-shadow: 
+        0 30px 60px rgba(0,0,0,0.8),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
+    position: relative;
+}
+
+/* Tipografia Neon Cyan/Purple */
+.machine-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+}
+
+h1 span {
+    color: #b100ff;
+    text-shadow: 0 0 10px #b100ff, 0 0 20px #b100ff;
+}
+
+/* Área dos Círculos */
+.screen-area {
+    position: relative;
+    background: #0f0f1a;
+    border-radius: 20px;
+    padding: 40px 20px;
+    border: 2px solid #2a2a4a;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.9);
+    margin-bottom: 30px;
+}
+
+.displays-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Círculos Metálicos */
+.circle-display {
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, #1a1a2e 0%, #000000 100%);
+    border: 8px solid #333;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+        0 0 30px rgba(0, 243, 255, 0.2),
+        inset 0 0 20px rgba(0, 243, 255, 0.4);
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    top: 30px;
+    color: #00f3ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #00f3ff;
+}
+
+.emoji-slot {
+    font-size: 5rem;
+    margin-top: 20px;
+}
+
+/* Animação de Giro (Efeito Slot) */
+.spinning {
+    animation: slotBlur 0.1s infinite alternate;
+}
+
+@keyframes slotBlur {
+    0% { filter: blur(2px); transform: translateY(-5px); }
+    100% { filter: blur(4px); transform: translateY(5px); }
+}
+
+/* Zona de Espera (Buffer) */
+.waiting-zone {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.wait-label {
+    color: #00f3ff;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.wait-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(0, 243, 255, 0.1);
+    border: 2px dashed #00f3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+/* Painel de Status */
+.info-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+.score-board {
+    color: #888;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.score-board span { color: #fff; }
+
+.status-bar {
+    color: #b100ff;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #b100ff;
+}
+
+/* Botões do Painel */
+.control-deck {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.action-btn {
+    background: linear-gradient(180deg, #333, #111);
+    border: 3px solid #555;
+    border-radius: 15px;
+    font-size: 3rem;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 0 #000;
+}
+
+.action-btn:hover {
+    border-color: #00f3ff;
+    box-shadow: 0 10px 0 #000, 0 0 20px rgba(0, 243, 255, 0.5);
+}
+
+.action-btn:active {
+    transform: translateY(10px);
+    box-shadow: 0 0 0 #000, 0 0 10px rgba(0, 243, 255, 0.5);
+}
