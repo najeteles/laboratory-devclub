@@ -106,3 +106,44 @@ button:disabled {
 }
 
 .lap-item span { color: #772FC3; font-weight: bold; }
+
+/* ============================================================
+   ASSINATURA GLOBAL MYSERV (DESKTOP)
+   ============================================================ */
+.branding-logo {
+    position: fixed; /* MUDANÇA CRÍTICA AQUI: de absolute para fixed */
+    bottom: 30px; 
+    left: 30px;   
+    z-index: 10;
+}
+
+.branding-logo img {
+    width: 120px; 
+    /* Sombra Cyan Neon para harmonizar com o Jokenpô */
+    filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4)); 
+    opacity: 0.8;
+    transition: width 0.3s ease;
+}
+
+/* ============================================================
+   AJUSTE RESPONSIVO GLOBAL (MOBILE)
+   ============================================================ */
+@media (max-width: 600px) { 
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40px; 
+    }
+
+    .branding-logo {
+        position: static;   
+        margin-bottom: 20px; 
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }   
+
+    .branding-logo img {
+        width: 90px; 
+    }
+}

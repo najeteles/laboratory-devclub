@@ -45,19 +45,20 @@ html, body {
 }
 
 /* ============================================================
-   3. BRANDING (LOGO MYSERV) - CANTO SUPERIOR ESQUERDO
+   3. BRANDING (LOGO MYSERV) - ASSINATURA DESKTOP
    ============================================================ */
-.branding-top {
-    position: absolute; 
-    top: 30px;
-    left: 30px;
+.branding-logo {
+    position: fixed; 
+    bottom: 30px; /* Ancorado no rodapé */
+    left: 30px;   /* Ancorado na esquerda */
     z-index: 10;
 }
 
-.branding-top img {
+.branding-logo img {
     width: 120px; 
     filter: drop-shadow(0 0 10px rgba(119, 47, 195, 0.3));
     opacity: 0.8;
+    transition: width 0.3s ease; /* Transição suave se redimensionar a tela */
 }
 
 /* ============================================================
@@ -159,7 +160,7 @@ button:hover {
    6. AJUSTE RESPONSIVO (MOBILE)
    ============================================================ */
 @media (max-width: 600px) { 
-    .branding-top {
+    .branding-logo {
         position: static;   /* Tira do canto e volta para o topo centralizado */
         margin-bottom: 20px;
         display: flex;
@@ -167,8 +168,8 @@ button:hover {
         width: 100%;
     }   
 
-    .branding-top img {
-        width: 100px;
+    .branding-logo img {
+        width: 90px;
     }
 
     .card {
