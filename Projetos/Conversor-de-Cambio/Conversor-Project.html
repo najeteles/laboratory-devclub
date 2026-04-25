@@ -7,15 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./Conversor-Project.css">
+    <link rel="stylesheet" href="Conversor-Project.css">
 </head>
 <body>
     
-    <div class="container">
-        <header>
-            <img src="./img/logo.png" alt="Logo" class="logo">
-        </header>
+    <header class="branding-logo">
+        <img src="assets/logo-myserv-transparente.png" alt="MyServ Logo">
+    </header>
 
+    <div class="container">  
         <main>
             <section class="section-input">
                 <label>Converter de:</label>
@@ -31,7 +31,7 @@
             </section>
 
             <section class="section-selection">
-                <img src="./img/seta.png" alt="Seta" class="arrow-down">
+                <img src="assets/seta.png" alt="Seta" class="arrow-down">
                 
                 <label>Converter para:</label>
                 <select id="moeda-select-para">
@@ -46,15 +46,15 @@
 
             <section class="section-result">
                 <div class="currency-box">
-                    <img src="./img/brasil.png" alt="Moeda Origem" id="bandeira-de">
+                    <img src="assets/brasil.png" alt="Moeda Origem" id="bandeira-de">
                     <p class="currency-name" id="nome-moeda-de">Real</p>
                     <p class="currency-value" id="valor-de-display">R$ 0,00</p>
                 </div>
 
-                <img src="./img/seta.png" alt="Seta" class="arrow-right">
+                <img src="assets/seta.png" alt="Seta" class="arrow-right">
 
                 <div class="currency-box">
-                    <img src="./img/usa.png" alt="Moeda Destino" id="bandeira-para">
+                    <img src="assets/usa.png" alt="Moeda Destino" id="bandeira-para">
                     <p class="currency-name" id="nome-moeda-para">Dólar americano</p>
                     <p class="currency-value" id="valor-para-display">US$ 0,00</p>
                 </div>
@@ -62,6 +62,6 @@
         </main>
     </div>
 
-    <script src="./Conversor-Project.js"></script>
+    <script src="Conversor-Project.js"></script>
 </body>
 </html>

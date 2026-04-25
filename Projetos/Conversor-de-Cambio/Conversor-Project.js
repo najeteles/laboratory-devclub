@@ -70,10 +70,10 @@ function getLocale(moeda) {
 
 function atualizarInterface() {
     const imagens = {
-        BRL: "./img/brasil.png",
-        USD: "./img/usa.png",
-        EUR: "./img/euro.png",
-        BTC: "./img/bitcoin.png"
+        BRL: "assets/brasil.png",
+        USD: "assets/usa.png",
+        EUR: "assets/euro.png",
+        BTC: "assets/bitcoin.png"
     }
 
     const nomes = {

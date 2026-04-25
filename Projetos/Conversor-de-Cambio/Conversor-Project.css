@@ -140,3 +140,43 @@ button:active { transform: scale(0.98); }
     opacity: 0.9;
     transform: rotate(-90deg);
 }
+
+/* ============================================================
+   ASSINATURA GLOBAL MYSERV (DESKTOP)
+   ============================================================ */
+.branding-logo {
+    position: fixed; 
+    bottom: 30px; 
+    left: 30px;   
+    z-index: 10;
+}
+
+.branding-logo img {
+    width: 120px; /* Isso impede o cérebro de ficar gigante */
+    filter: drop-shadow(0 0 10px rgba(119, 47, 195, 0.3)); 
+    opacity: 0.8;
+    transition: width 0.3s ease;
+}
+
+/* ============================================================
+   AJUSTE RESPONSIVO GLOBAL (MOBILE)
+   ============================================================ */
+@media (max-width: 600px) { 
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40px; 
+    }
+
+    .branding-logo {
+        position: static;   
+        margin-bottom: 25px; 
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }   
+
+    .branding-logo img {
+        width: 90px; 
+    }
+}
