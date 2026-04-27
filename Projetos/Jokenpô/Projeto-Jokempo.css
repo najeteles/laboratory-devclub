@@ -6,7 +6,6 @@
 }
 
 body {
-    /* Fundo escuro de cassino usando imagem realista */
     background: url('https://images.unsplash.com/photo-1596838132731-dd964551319a?auto=format&fit=crop&q=80&w=1920') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
@@ -22,7 +21,6 @@ body {
     padding: 20px;
 }
 
-/* O Chassi da Máquina */
 .slot-machine {
     background: linear-gradient(145deg, #1a1a2e, #16213e);
     border: 4px solid #4a4e69;
@@ -36,7 +34,6 @@ body {
     position: relative;
 }
 
-/* Tipografia Neon Cyan/Purple */
 .machine-header {
     text-align: center;
     margin-bottom: 40px;
@@ -54,7 +51,6 @@ h1 span {
     text-shadow: 0 0 10px #b100ff, 0 0 20px #b100ff;
 }
 
-/* Área dos Círculos */
 .screen-area {
     position: relative;
     background: #0f0f1a;
@@ -71,7 +67,6 @@ h1 span {
     gap: 50px;
 }
 
-/* Círculos Metálicos */
 .circle-display {
     width: 220px;
     height: 220px;
@@ -103,7 +98,6 @@ h1 span {
     margin-top: 20px;
 }
 
-/* Animação de Giro (Efeito Slot) */
 .spinning {
     animation: slotBlur 0.1s infinite alternate;
 }
@@ -113,7 +107,6 @@ h1 span {
     100% { filter: blur(4px); transform: translateY(5px); }
 }
 
-/* Zona de Espera (Buffer) */
 .waiting-zone {
     position: absolute;
     left: 30px;
@@ -145,7 +138,6 @@ h1 span {
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
 }
 
-/* Painel de Status */
 .info-panel {
     display: flex;
     justify-content: space-between;
@@ -174,7 +166,6 @@ h1 span {
     text-shadow: 0 0 5px #b100ff;
 }
 
-/* Botões do Painel */
 .control-deck {
     display: flex;
     justify-content: center;
@@ -207,24 +198,42 @@ h1 span {
    ============================================================ */
 .branding-logo {
     position: absolute; 
-    bottom: 5px; /* Distância do chão da caixa */
-    left: 5px;   /* Distância da parede esquerda da caixa */ 
+    bottom: 5px; 
+    left: 5px;   
     z-index: 10;
 }
 
 .branding-logo img {
     width: 90px; 
-    /* Sombra Cyan Neon para harmonizar com o Jokenpô */
     filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4)); 
     opacity: 0.8;
     transition: width 0.3s ease;
 }
 
 /* ============================================================
+   CONTROLE DE ÁUDIO
+   ============================================================ */
+.mute-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.2s;
+    filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.5));
+}
+
+.mute-btn:active {
+    transform: scale(0.8);
+}
+
+/* ============================================================
    AJUSTE RESPONSIVO GLOBAL (MOBILE)
    ============================================================ */
 @media (max-width: 600px) { 
-    /* 1. Ajustes Gerais e da Assinatura (que já tínhamos) */
     .branding-logo {
         position: static;   
         margin-bottom: 15px; 
@@ -238,22 +247,21 @@ h1 span {
     }
 
     .machine-header h1 {
-        font-size: 2rem; /* Reduz um pouco o título */
+        font-size: 2rem; 
     }
 
-    /* 2. Consertando os Círculos Ovalados */
     .displays-container {
-        gap: 15px; /* Reduz o espaço entre os círculos */
+        gap: 15px; 
     }
 
     .circle-display {
-        width: 130px;  /* Reduz drasticamente para manter o formato redondo */
+        width: 130px;  
         height: 130px;
         border-width: 4px;
     }
 
     .emoji-slot {
-        font-size: 3rem; /* Emojis menores para caber no novo círculo */
+        font-size: 3rem; 
         margin-top: 10px;
     }
 
@@ -262,40 +270,35 @@ h1 span {
         font-size: 0.8rem;
     }
 
-    /* Adicionei este bloco para criar espaço (um "chão") na caixa preta */
     .screen-area {
         padding-bottom: 90px; 
     }
 
-    /* 3. Reposicionando o Buffer "Aguardando" */
     .waiting-zone {
-        left: 50%; /* Joga para o meio da tela */
-        bottom: 15px; /* Descola um pouco do fundo */
-        /* translateX(-50%) garante o centro matemático, e o scale mantém o tamanho reduzido */
+        left: 50%; 
+        bottom: 15px; 
         transform: translateX(-50%) scale(0.70); 
         transform-origin: center bottom;
     }
 
-    /* 4. Desengasgando o Painel de Texto e Placar */
     .info-panel {
-        flex-wrap: wrap; /* Permite que o texto quebre de linha de forma elegante */
+        flex-wrap: wrap; 
         justify-content: space-around;
         padding: 15px 10px;
         gap: 10px;
     }
 
     .status-bar {
-        width: 100%; /* Força o texto principal a ocupar uma linha inteira sozinho */
+        width: 100%; 
         text-align: center;
         font-size: 1rem;
-        order: 3; /* Joga o texto para baixo dos placares */
+        order: 3; 
     }
 
     .score-board {
         font-size: 1rem;
     }
 
-    /* 5. Ajustando os Botões do Painel */
     .control-deck {
         gap: 15px;
     }
@@ -303,5 +306,15 @@ h1 span {
     .action-btn {
         font-size: 2.2rem;
         padding: 10px 20px;
+    }
+
+    /* 6. Ajustando o Botão de Mute para Mobile */
+    .mute-btn {
+        top: 15px;
+        right: 15px;
+        font-size: 1.2rem; /* Reduz o tamanho do emoji */
+        background: rgba(0, 0, 0, 0.3); /* Cria um fundinho escuro sutil */
+        padding: 5px 8px;
+        border-radius: 10px; /* Arredonda como um app nativo */
     }
 }
