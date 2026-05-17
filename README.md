@@ -4,22 +4,10 @@ Repositório dedicado ao desenvolvimento de interfaces modernas, estudos aprofun
 
 ## 🚀 Arquitetura e Tecnologias Aplicadas
 
-O ecossistema de desenvolvimento deste laboratório é construído sobre uma stack moderna, priorizando modularidade, escalabilidade e integração com Inteligência Artificial.
+* **HTML5 Semântico:** Estruturação otimizada para SEO e acessibilidade.
+* **CSS3 Avançado:** Flexbox, CSS Grid, animações responsivas e efeitos visuais imersivos.
+* **Design Responsivo:** Interfaces fluidas que se adaptam desde dispositivos móveis até painéis de monitoramento desktop.
 
-### 💻 Front-end & Interface do Usuário (UX/UI)
-* **JavaScript (ES6+) & TypeScript:** Lógica assíncrona orientada a eventos, manipulação avançada de DOM e tipagem estática para códigos à prova de falhas.
-* **React:** Construção de interfaces componentizadas, reativas e Single Page Applications (SPAs).
-* **HTML5 Semântico:** Estruturação de dados otimizada para SEO, acessibilidade e parsing de robôs.
-* **CSS3 Avançado (Flexbox & Grid):** Estilização modular, animações responsivas e design fluido que se adapta de dispositivos móveis a painéis de monitoramento desktop.
-
-### ⚙️ Back-end, Dados & Infraestrutura
-* **Node.js:** Ambiente de execução de alta performance para construção de microsserviços e consumo de APIs externas.
-* **PostgreSQL:** Modelagem e gestão de banco de dados relacional para persistência segura de dados das aplicações.
-* **DevOps & Deploy:** Conteinerização de aplicações utilizando **Docker** para rodar de forma resiliente em servidores Linux (VPS e infraestrutura local).
-
-### 🤖 Orquestração de Agentes & Automação (MyServ)
-* **Workflows Orientados a IA:** Criação de arquiteturas baseadas em Tools para operações de I/O em vez de fluxos lineares estáticos.
-* **Frameworks & Motores:** Integração e orquestração de Agentes autônomos utilizando **n8n**, **LangGraph**, e **Agno** para automatizar processos de ponta a ponta.
 ---
 
 ## 📂 Vitrine de Projetos (Index)
