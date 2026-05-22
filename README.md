@@ -54,7 +54,7 @@ Implementação de máquina de estados com buffer de memória visual, utilizando
 <img src="./Jokenpo.gif" width="300px" alt="Demonstração Jokenpô Casino MyServ" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
 
-### 🔗 💱 **8. Orquestrador Financeiro Multimoedas (MyServ Convert)**
+### 🔗 💱 **8. Orquestrador Financeiro Multimoedas (MyServ Convert V2)**
 
 Pipeline de consumo assíncrono de dados (Fetch API) acoplado a um motor de cálculo de taxas cruzadas em tempo real (Bid Spot Rate). Conta com fallback estático de resiliência para garantir alta disponibilidade e uma interface reativa de renderização dinâmica (DOM Manipulation) isolada em arquitetura Flexbox com tratamento de ativos visuais em GPU.
 <br>
