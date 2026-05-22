@@ -7,6 +7,7 @@ Repositório dedicado ao desenvolvimento de interfaces modernas, estudos aprofun
 * **HTML5 Semântico:** Estruturação otimizada para SEO e acessibilidade.
 * **CSS3 Avançado:** Flexbox, CSS Grid, animações responsivas e efeitos visuais imersivos.
 * **Design Responsivo:** Interfaces fluidas que se adaptam desde dispositivos móveis até painéis de monitoramento desktop.
+* **JavaScript Moderno (ES6+):** Lógica assíncrona (Promises/Async-Await), consumo de APIs externas em tempo real, manipulação dinâmica do DOM e arquitetura orientada a eventos.
 
 ---
 
@@ -41,28 +42,30 @@ Lógica de geração aleatória com parametrização de intervalo dinâmico (Mí
 <br>
 <img src="./Sorteio.gif" width="300px" alt="Demonstração Sorteador MyServ" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+🚀 **[Acessar Aplicação em Produção](https://najeteles.github.io/laboratory-devclub/Projetos/Sorteador/Projeto-Sorteio.html))**
 
 ### ⏱️ 6. Motor de Cronometragem (Cronômetro)
 Lógica de controle de estado assíncrono (Start/Pause/Reset) utilizando processamento de intervalos em tempo real e renderização dinâmica de interface.
 <br>
 <img src="./Cronometro.gif" width="300px" alt="Demonstração do Cronômetro" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+🚀 **[Acessar Aplicação em Produção](https://najeteles.github.io/laboratory-devclub/Projetos/Cron/Projeto-Cron.html))**
 
 ### 🎰 7. Motor de Decisão Assíncrona (Jokenpô Casino)
 Implementação de máquina de estados com buffer de memória visual, utilizando orquestração de temporizadores assíncronos (Event Loop) e encapsulamento modular de UI.
 <br>
 <img src="./Jokenpo.gif" width="300px" alt="Demonstração Jokenpô Casino MyServ" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+🚀 **[Acessar Aplicação em Produção](https://najeteles.github.io/laboratory-devclub/Projetos/Jokenpô/Projeto-Jokempo.html))**
 
-### 🔗 💱 **8. Orquestrador Financeiro Multimoedas (MyServ Convert)**
+### 🔗 💱 **8. Orquestrador Financeiro Multimoedas (MyServ Convert V2)**
 
 Pipeline de consumo assíncrono de dados (Fetch API) acoplado a um motor de cálculo de taxas cruzadas em tempo real (Bid Spot Rate). Conta com fallback estático de resiliência para garantir alta disponibilidade e uma interface reativa de renderização dinâmica (DOM Manipulation) isolada em arquitetura Flexbox com tratamento de ativos visuais em GPU.
 <br>
 <img src="./Conversordemoedas_v2.gif" width="300px" alt="Demonstração MyServ Convert" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+🚀 **[Acessar Aplicação em Produção](https://najeteles.github.io/laboratory-devclub/Projetos/Conversor-de-Cambio_v2/Conversor-Project.html))**
 
 ---
 
-*Mantido e versionado diretamente do nó local (HP ProLiant ML30 Gen9) por Jean Teles.*
----
 *Mantido e versionado diretamente do nó local (HP ProLiant ML30 Gen9) por Jean Teles.*
