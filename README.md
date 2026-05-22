@@ -7,6 +7,7 @@ Repositório dedicado ao desenvolvimento de interfaces modernas, estudos aprofun
 * **HTML5 Semântico:** Estruturação otimizada para SEO e acessibilidade.
 * **CSS3 Avançado:** Flexbox, CSS Grid, animações responsivas e efeitos visuais imersivos.
 * **Design Responsivo:** Interfaces fluidas que se adaptam desde dispositivos móveis até painéis de monitoramento desktop.
+* **JavaScript Moderno (ES6+):** Lógica assíncrona (Promises/Async-Await), consumo de APIs externas em tempo real, manipulação dinâmica do DOM e arquitetura orientada a eventos.
 
 ---
 
