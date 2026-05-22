@@ -1,0 +1,239 @@
+:root {
+    --bg-base: #0f111a;
+    --surface-color: #1a1d2d;
+    --surface-border: #2a2e45;
+    --text-primary: #ffffff;
+    --text-secondary: #8b92b2;
+    --accent-glow: #8b5cf6;
+    --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.myserv-container {
+    position: relative; 
+    background-color: var(--surface-color);
+    border: 1px solid var(--surface-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    
+    /* LARGURA AUMENTADA AQUI (de 450px para 520px) */
+    width: 100%;
+    max-width: 520px; 
+    
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.1);
+    overflow: hidden; 
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    background: linear-gradient(to right, #ffffff, #a5b4cb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* REMOVA A MARGEM INFERIOR ANTIGA DO H1 */
+    margin-bottom: 0; 
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.input-group, .select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%; /* OBRIGATÓRIO: Força o select a colar nas bordas do flex-group */
+    background-color: var(--bg-base);
+    border: 1px solid var(--surface-border);
+    color: var(--text-primary);
+    padding: 10px 14px; /* Redução agressiva no eixo Y (vertical) */
+    height: 42px; /* Trava a altura exata para não expandir */
+    border-radius: 10px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    text-overflow: ellipsis;
+}
+
+input:focus, select:focus {
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+.currency-selectors {
+    display: flex;
+    align-items: center; /* Modificado de flex-end para center absoluto */
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.select-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.swap-icon {
+    font-size: 1.5rem;
+    color: var(--accent-glow);
+    margin-top: 20px; /* Reduzido de 24px para 20px para acompanhar a nova altura fina do select */
+    padding-bottom: 0;
+    user-select: none;
+}
+
+.myserv-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: var(--accent-gradient);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.myserv-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+}
+
+.myserv-btn:active {
+    transform: translateY(0);
+}
+
+.result-box {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--surface-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza verticalmente a coluna */
+    gap: 1rem;
+    position: relative;
+    z-index: 2; /* Mantém os resultados acima da marca d'água */
+}
+
+.currency-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.currency-flag {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--surface-border);
+}
+
+.currency-name {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.currency-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.highlight .currency-value {
+    color: var(--accent-glow);
+    font-size: 2rem;
+}
+
+/* Tratamento da Seta Dinâmica */
+.arrow-down-img {
+    width: 32px; /* Mantém a proporção equilibrada sem estourar */
+    height: auto;
+    margin: 8px 0;
+    object-fit: contain;
+    /* Dica: Caso a seta do asset seja preta, descomente a linha abaixo para inverter para branca com leve opacidade */
+    /* filter: invert(1) opacity(0.7); */
+}
+
+/* Marca d'água encapsulada */
+.myserv-internal-logo {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 80px;
+    opacity: 0.4;
+    /* mix-blend-mode removido, consumindo menos processamento da GPU local */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.myserv-container:hover .myserv-internal-logo {
+    opacity: 0.35; /* Feedback visual discreto de foco */
+}
+
+/* Wrapper para centralizar logo e título na horizontal */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem; /* Dá um respiro antes do subtítulo */
+}
+
+/* Estilo para a logo do header (seguindo o padrão do seu print de exemplo) */
+.brand-logo {
+    width: 160px; /* Aumentado de 32px para 160px para dar destaque */
+    height: auto;
+    object-fit: contain;
+    /* Dica de Arquiteto: Adiciona um brilho sutil ao redor da balança para destacar no fundo escuro */
+    filter: drop-shadow(0 5px 15px rgba(139, 92, 246, 0.2)); 
+}
+
+.rate-badge {
+    background-color: rgba(139, 92, 246, 0.08);
+    color: var(--accent-glow);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    width: 100%;
+}

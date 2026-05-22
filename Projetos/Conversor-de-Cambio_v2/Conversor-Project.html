@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyServ Convert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Conversor-Project.css">
+</head>
+<body>
+    <main class="myserv-container">
+        <header>
+            <div class="logo-wrapper">
+                <img src="./assets/conversor-transparente.png" alt="Conversor Logo" class="brand-logo" onerror="this.style.display='none'">
+            </div>
+        </header>
+        <section class="converter-box">
+            <div class="input-group">
+                <label for="valor-input">Valor a Converter</label>
+                <input type="number" id="valor-input" placeholder="0.00">
+            </div>
+
+            <div class="currency-selectors">
+                <div class="select-group">
+                    <label>De:</label>
+                    <select id="moeda-select-de">
+                        <option value="BRL">R$ Real</option>
+                        <option value="USD">US$ Dólar</option>
+                        <option value="EUR">€ Euro</option>
+                        <option value="BTC">₿ Bitcoin</option>
+                    </select>
+                </div>
+                
+                <span class="swap-icon">⇄</span>
+
+                <div class="select-group">
+                    <label>Para:</label>
+                    <select id="moeda-select-para">
+                        <option value="USD">US$ Dólar</option>
+                        <option value="BRL">R$ Real</option>
+                        <option value="EUR">€ Euro</option>
+                        <option value="BTC">₿ Bitcoin</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="converter-button" class="myserv-btn">EXECUTAR CONVERSÃO</button>
+        </section>
+
+        <section class="result-box">
+            <div class="rate-badge" id="taxa-tempo-real">Conectando ao câmbio...</div>
+            <div class="currency-display">
+                <img src="./assets/brasil.png" id="bandeira-de" alt="Bandeira Origem" class="currency-flag">
+                <p class="currency-name" id="nome-moeda-de">Real</p>
+                <p class="currency-value" id="valor-de-display">R$ 0,00</p>
+            </div>
+
+            <img src="./assets/seta.png" class="arrow-down-img" alt="Seta para conversão">
+
+            <div class="currency-display highlight">
+                <img src="./assets/usa.png" id="bandeira-para" alt="Bandeira Destino" class="currency-flag">
+                <p class="currency-name" id="nome-moeda-para">Dólar americano</p>
+                <p class="currency-value" id="valor-para-display">US$ 0,00</p>
+            </div>
+        </section>
+
+        <img src="./assets/logo-myserv-transparente.png" alt="MyServ Company" class="myserv-internal-logo">
+    </main>
+
+    <script src="./Conversor-Project.js"></script>
+</body>
+</html>
