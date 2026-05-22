@@ -42,18 +42,21 @@ Lógica de geração aleatória com parametrização de intervalo dinâmico (Mí
 <br>
 <img src="./Sorteio.gif" width="300px" alt="Demonstração Sorteador MyServ" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+🚀 **[Acessar Aplicação em Produção](https://najeteles.github.io/laboratory-devclub/Projetos/Sorteador/Projeto-Sorteio.html))**
 
 ### ⏱️ 6. Motor de Cronometragem (Cronômetro)
 Lógica de controle de estado assíncrono (Start/Pause/Reset) utilizando processamento de intervalos em tempo real e renderização dinâmica de interface.
 <br>
 <img src="./Cronometro.gif" width="300px" alt="Demonstração do Cronômetro" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+🚀 **[Acessar Aplicação em Produção]([COLE_O_LINK_AQUI](https://najeteles.github.io/laboratory-devclub/Projetos/Cron/Projeto-Cron.html))**
 
 ### 🎰 7. Motor de Decisão Assíncrona (Jokenpô Casino)
 Implementação de máquina de estados com buffer de memória visual, utilizando orquestração de temporizadores assíncronos (Event Loop) e encapsulamento modular de UI.
 <br>
 <img src="./Jokenpo.gif" width="300px" alt="Demonstração Jokenpô Casino MyServ" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+🚀 **[Acessar Aplicação em Produção]([COLE_O_LINK_AQUI](https://najeteles.github.io/laboratory-devclub/Projetos/Jokempô/Projeto-Jokempo.html))**
 
 ### 🔗 💱 **8. Orquestrador Financeiro Multimoedas (MyServ Convert V2)**
 
@@ -61,6 +64,7 @@ Pipeline de consumo assíncrono de dados (Fetch API) acoplado a um motor de cál
 <br>
 <img src="./Conversordemoedas_v2.gif" width="300px" alt="Demonstração MyServ Convert" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
+🚀 **[Acessar Aplicação em Produção](https://najeteles.github.io/laboratory-devclub/Projetos/Conversor-de-Cambio_v2/Conversor-Project.html))**
 
 ---
 
