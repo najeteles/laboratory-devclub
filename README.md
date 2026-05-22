@@ -49,14 +49,14 @@ Lógica de controle de estado assíncrono (Start/Pause/Reset) utilizando process
 <br>
 <img src="./Cronometro.gif" width="300px" alt="Demonstração do Cronômetro" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
-🚀 **[Acessar Aplicação em Produção]([COLE_O_LINK_AQUI](https://najeteles.github.io/laboratory-devclub/Projetos/Cron/Projeto-Cron.html))**
+🚀 **[Acessar Aplicação em Produção](https://najeteles.github.io/laboratory-devclub/Projetos/Cron/Projeto-Cron.html))**
 
 ### 🎰 7. Motor de Decisão Assíncrona (Jokenpô Casino)
 Implementação de máquina de estados com buffer de memória visual, utilizando orquestração de temporizadores assíncronos (Event Loop) e encapsulamento modular de UI.
 <br>
 <img src="./Jokenpo.gif" width="300px" alt="Demonstração Jokenpô Casino MyServ" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
-🚀 **[Acessar Aplicação em Produção]([COLE_O_LINK_AQUI](https://najeteles.github.io/laboratory-devclub/Projetos/Jokempô/Projeto-Jokempo.html))**
+🚀 **[Acessar Aplicação em Produção](https://najeteles.github.io/laboratory-devclub/Projetos/Jokempô/Projeto-Jokempo.html))**
 
 ### 🔗 💱 **8. Orquestrador Financeiro Multimoedas (MyServ Convert V2)**
 
