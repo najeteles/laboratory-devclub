@@ -58,7 +58,7 @@ Implementação de máquina de estados com buffer de memória visual, utilizando
 
 Pipeline de consumo assíncrono de dados (Fetch API) acoplado a um motor de cálculo de taxas cruzadas em tempo real (Bid Spot Rate). Conta com fallback estático de resiliência para garantir alta disponibilidade e uma interface reativa de renderização dinâmica (DOM Manipulation) isolada em arquitetura Flexbox com tratamento de ativos visuais em GPU.
 <br>
-<img src="./Conversordemoedas.gif" width="300px" alt="Demonstração MyServ Convert" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
+<img src="./Conversordemoedas_v2.gif" width="300px" alt="Demonstração MyServ Convert" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
 <br>
 
 ---
