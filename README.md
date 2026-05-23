@@ -1,4 +1,4 @@
-# 💎 Vitrine MyServ Company - Laboratório de Arquitetura
+# 💎 Vitrine Curso Full-Stack - Laboratório de desenvolvimento
 
 Repositório dedicado ao desenvolvimento de interfaces modernas, estudos aprofundados de CSS/HTML/JS registrando a linha do tempo do processo de aprendizado na criação de sites, land-pages, apps, agentesIA e muito mais. Todo o código aqui serve como base para os portais e vitrines dos visitantes da agência.
 
